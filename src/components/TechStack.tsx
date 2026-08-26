@@ -1,6 +1,7 @@
 const stack = [
   {
     category: "CORE",
+    description: "Languages and foundations",
     technologies: [
       "Python",
       "SQL",
@@ -8,6 +9,7 @@ const stack = [
   },
   {
     category: "DATA",
+    description: "Processing and orchestration",
     technologies: [
       "Apache Airflow",
       "Apache Spark",
@@ -16,6 +18,7 @@ const stack = [
   },
   {
     category: "STORAGE",
+    description: "Databases and object storage",
     technologies: [
       "PostgreSQL",
       "SQL Server",
@@ -24,6 +27,7 @@ const stack = [
   },
   {
     category: "PLATFORM",
+    description: "Infrastructure and delivery",
     technologies: [
       "Docker",
       "Git",
@@ -41,18 +45,28 @@ function TechStack() {
       </div>
 
       <div className="stack">
-        {stack.map((group) => (
-          <div className="stack__group" key={group.category}>
-            <h3>{group.category}</h3>
+        {stack.map((group, index) => (
+          <article className="stack__group" key={group.category}>
+            <div className="stack__heading">
+              <span className="stack__number">
+                0{index + 1}
+              </span>
 
-            <ul>
+              <h3>{group.category}</h3>
+            </div>
+
+            <p className="stack__description">
+              {group.description}
+            </p>
+
+            <ul className="stack__technologies">
               {group.technologies.map((technology) => (
                 <li key={technology}>
                   {technology}
                 </li>
               ))}
             </ul>
-          </div>
+          </article>
         ))}
       </div>
     </section>

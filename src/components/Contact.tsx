@@ -1,18 +1,26 @@
 function Contact() {
   return (
     <section className="contact" id="contact">
-      <div className="container contact__content">
-        <div className="section__header section__header--light">
+      <div className="container contact__container">
+        <div className="section__header contact__header">
           <span className="section__number">05</span>
           <span className="section__label">CONTACT</span>
         </div>
 
-        <div className="contact__grid">
-          <h2>
-            Let's build something
-            <br />
-            with data.
-          </h2>
+        <div className="contact__content">
+          <div className="contact__headline">
+            <h2>
+              Let's build something
+              <br />
+              with data.
+            </h2>
+
+            <p>
+              Interested in data engineering, software,
+              analytics or just want to talk about technology?
+              Feel free to reach out.
+            </p>
+          </div>
 
           <div className="contact__links">
             <a
@@ -20,7 +28,8 @@ function Contact() {
               target="_blank"
               rel="noreferrer"
             >
-              GitHub ↗
+              <span>GitHub</span>
+              <span>↗</span>
             </a>
 
             <a
@@ -28,11 +37,13 @@ function Contact() {
               target="_blank"
               rel="noreferrer"
             >
-              LinkedIn ↗
+              <span>LinkedIn</span>
+              <span>↗</span>
             </a>
 
             <a href="mailto:pedrorochadejesus.70@gmail.com">
-              Email ↗
+              <span>Email</span>
+              <span>↗</span>
             </a>
           </div>
         </div>

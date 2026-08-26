@@ -34,40 +34,46 @@ function Hero() {
       </div>
 
       <div className="hero__visual" aria-label="Data pipeline">
-        <div className="pipeline">
-          <div className="pipeline__node">
-            <span>01</span>
-            API
+        <div className="hero__visual-inner">
+          <span className="pipeline__label">
+            DATA FLOW / 001
+          </span>
+
+          <div className="pipeline">
+            <div className="pipeline__node">
+              <span>01</span>
+              API
+            </div>
+
+            <div className="pipeline__line" />
+
+            <div className="pipeline__node">
+              <span>02</span>
+              Ingestion
+            </div>
+
+            <div className="pipeline__line" />
+
+            <div className="pipeline__node pipeline__node--accent">
+              <span>03</span>
+              Data Lake
+            </div>
+
+            <div className="pipeline__line" />
+
+            <div className="pipeline__node">
+              <span>04</span>
+              Processing
+            </div>
+
+            <div className="pipeline__line" />
+
+            <div className="pipeline__node">
+              <span>05</span>
+              Analytics
+            </div>
           </div>
-
-          <div className="pipeline__line" />
-
-          <div className="pipeline__node">
-            <span>02</span>
-            Ingestion
-          </div>
-
-          <div className="pipeline__line" />
-
-          <div className="pipeline__node pipeline__node--accent">
-            <span>03</span>
-            Data Lake
-          </div>
-
-          <div className="pipeline__line" />
-
-          <div className="pipeline__node">
-            <span>04</span>
-            Processing
-          </div>
-
-          <div className="pipeline__line" />
-
-          <div className="pipeline__node">
-            <span>05</span>
-            Analytics
-          </div>
-        </div>
+      </div>
       </div>
     </section>
   );

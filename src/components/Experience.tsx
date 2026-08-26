@@ -1,3 +1,35 @@
+const experiences = [
+  {
+    period: "2026 — PRESENT",
+    role: "Data Engineer I",
+    company: "SEEDUC-RJ",
+    description:
+      "Building and maintaining ETL workflows, improving data pipelines and supporting analytics solutions with a focus on reliability and performance.",
+    technologies: [
+      "Python",
+      "SQL",
+      "Airflow",
+      "Power BI",
+      "SQL Server",
+    ],
+  },
+  {
+    period: "2022 - 2026",
+    role: "Software Engineer Full Stack",
+    company: "DRIC Software",
+    description:
+      "Worked on backend systems, APIs and database-driven applications, developing a strong software engineering foundation now applied to data platforms.",
+    technologies: [
+      "Python",
+      "Flask",
+      "SQL",
+      "React",
+      "APIs",
+      "Linux",
+    ],
+  },
+];
+
 function Experience() {
   return (
     <section className="section container" id="experience">
@@ -7,60 +39,34 @@ function Experience() {
       </div>
 
       <div className="experience">
-        <article className="experience__item">
-          <div className="experience__period">
-            2026 — PRESENT
-          </div>
-
-          <div className="experience__content">
-            <h3>Data Engineer</h3>
-
-            <span className="experience__company">
-              SEEDUC-RJ
-            </span>
-
-            <p>
-              Building and maintaining ETL workflows,
-              improving data pipelines and supporting
-              analytics solutions.
-            </p>
-
-            <div className="experience__technologies">
-              <span>Python</span>
-              <span>SQL</span>
-              <span>Airflow</span>
-              <span>Power BI</span>
+        {experiences.map((experience) => (
+          <article
+            className="experience__item"
+            key={`${experience.role}-${experience.period}`}
+          >
+            <div className="experience__period">
+              {experience.period}
             </div>
-          </div>
-        </article>
 
-        <article className="experience__item">
-          <div className="experience__period">
-            2022 - 2025
-          </div>
+            <div className="experience__content">
+              <div className="experience__heading">
+                <h3>{experience.role}</h3>
 
-          <div className="experience__content">
-            <h3>Software Engineer Fullstack</h3>
+                <span>{experience.company}</span>
+              </div>
 
-            <span className="experience__company">
-                DRIC Software
-            </span>
+              <p>{experience.description}</p>
 
-            <p>
-              Software development experience focused on
-              backend systems, APIs and database-driven
-              applications.
-            </p>
-
-            <div className="experience__technologies">
-              <span>Python</span>
-              <span>Flask</span>
-              <span>SQL</span>
-              <span>React</span>
-              <span>Linux</span>
+              <div className="experience__technologies">
+                {experience.technologies.map((technology) => (
+                  <span key={technology}>
+                    {technology}
+                  </span>
+                ))}
+              </div>
             </div>
-          </div>
-        </article>
+          </article>
+        ))}
       </div>
     </section>
   );

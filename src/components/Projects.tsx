@@ -1,11 +1,16 @@
 const projects = [
   {
     number: "01",
-    title: "Board Games Lakehouse",
+    title: "MeepleLake",
     description:
       "End-to-end data platform designed around a Medallion Architecture for collecting, processing and analyzing board game data.",
-    architecture:
-      "API → MinIO → Spark → Iceberg → Airflow → Analytics",
+    architecture: [
+      "API",
+      "MinIO",
+      "Spark",
+      "Iceberg",
+      "Analytics",
+    ],
     technologies: [
       "Python",
       "Spark",
@@ -17,11 +22,15 @@ const projects = [
   },
   {
     number: "02",
-    title: "Music Data Pipeline",
+    title: "MusicPulse",
     description:
-      "Automated pipeline for ingesting and transforming music streaming data for analytical workloads.",
-    architecture:
-      "API → Airflow → PostgreSQL → Analytics",
+      "Automated data pipeline for ingesting, transforming and storing music streaming data for analytical workloads.",
+    architecture: [
+      "API",
+      "Airflow",
+      "PostgreSQL",
+      "Analytics",
+    ],
     technologies: [
       "Python",
       "Airflow",
@@ -34,9 +43,13 @@ const projects = [
     number: "03",
     title: "Weather Data Pipeline",
     description:
-      "Data ingestion and transformation pipeline built around weather API data.",
-    architecture:
-      "OpenWeather → Python → Airflow → PostgreSQL",
+      "Automated ingestion and transformation pipeline built around weather API data.",
+    architecture: [
+      "OpenWeather",
+      "Python",
+      "Airflow",
+      "PostgreSQL",
+    ],
     technologies: [
       "Python",
       "Airflow",
@@ -67,6 +80,7 @@ function Projects() {
                 <h3>{project.title}</h3>
 
                 <a
+                  className="project__link"
                   href={project.link}
                   target="_blank"
                   rel="noreferrer"
@@ -80,9 +94,17 @@ function Projects() {
                 {project.description}
               </p>
 
-              <p className="project__architecture">
-                {project.architecture}
-              </p>
+              <div className="project__architecture">
+                {project.architecture.map((step, index) => (
+                  <span key={step}>
+                    {step}
+
+                    {index < project.architecture.length - 1 && (
+                      <span className="project__arrow">→</span>
+                    )}
+                  </span>
+                ))}
+              </div>
 
               <div className="project__technologies">
                 {project.technologies.map((technology) => (
