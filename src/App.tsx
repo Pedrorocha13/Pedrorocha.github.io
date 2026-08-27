@@ -6,6 +6,7 @@ import Experience from "./components/Experience";
 import TechStack from "./components/TechStack";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
+import Reveal from "./components/Reveal";
 
 import "./styles/globals.css";
 
@@ -16,10 +17,23 @@ function App() {
 
       <main>
         <Hero />
-        <About />
-        <Projects />
-        <Experience />
-        <TechStack />
+
+        <Reveal>
+          <About />
+        </Reveal>
+
+        <Reveal>
+          <Projects />
+        </Reveal>
+
+        <Reveal>
+          <Experience />
+        </Reveal>
+
+        <Reveal>
+          <TechStack />
+        </Reveal>
+
         <Contact />
       </main>
 

@@ -40,40 +40,40 @@ function Hero() {
           </span>
 
           <div className="pipeline">
-            <div className="pipeline__node">
+            <div className="pipeline__node pipeline__node--1">
               <span>01</span>
               API
             </div>
 
-            <div className="pipeline__line" />
+            <div className="pipeline__line pipeline__line--1" />
 
-            <div className="pipeline__node">
+            <div className="pipeline__node pipeline__node--2">
               <span>02</span>
               Ingestion
             </div>
 
-            <div className="pipeline__line" />
+            <div className="pipeline__line pipeline__line--2" />
 
-            <div className="pipeline__node pipeline__node--accent">
+            <div className="pipeline__node pipeline__node--3 pipeline__node--accent">
               <span>03</span>
               Data Lake
             </div>
 
-            <div className="pipeline__line" />
+            <div className="pipeline__line pipeline__line--3" />
 
-            <div className="pipeline__node">
+            <div className="pipeline__node pipeline__node--4">
               <span>04</span>
               Processing
             </div>
 
-            <div className="pipeline__line" />
+            <div className="pipeline__line pipeline__line--4" />
 
-            <div className="pipeline__node">
+            <div className="pipeline__node pipeline__node--5">
               <span>05</span>
               Analytics
             </div>
           </div>
-      </div>
+        </div>
       </div>
     </section>
   );
